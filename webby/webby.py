@@ -15,7 +15,7 @@ page_soup = soup(kurasa, "html.parser")
  #grabs each product
 containers = page_soup.findAll("div",{"class":"item-container"})
 
-filename = "Graphics.scv"
+filename = "Graphics.csv"
 f = open(filename, "w")
 headers = "brand, product_name, shipping\n"
 
