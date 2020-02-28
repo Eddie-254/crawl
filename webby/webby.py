@@ -17,7 +17,7 @@ containers = page_soup.findAll("div",{"class":"item-container"})
 
 filename = "Graphics.csv"
 f = open(filename, "w")
-headers = "brand, product_name, shipping\n"
+headers = "brand, product_name, shipping \n"
 
 f.write(headers)
 
