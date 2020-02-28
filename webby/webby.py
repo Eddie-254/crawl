@@ -7,14 +7,14 @@ my_url = 'https://www.newegg.com/Video-Cards-Video-Devices/Category/ID-38?Tpk=gr
 
 # opeming up connection, grabbing the page
 uClient = uReq(my_url) 
- kurasa = uClient.read()
- uClient.close()
+kurasa = uClient.read()
+uClient.close()
 #html parsing 
- page_soup = soup(kurasa, "html.parser")
+page_soup = soup(kurasa, "html.parser")
 
  #grabs each product
- containers = page_soup.findAll("div",{"class":"item-container"})
+containers = page_soup.findAll("div",{"class":"item-container"})
 
- for container in containers:
+for container in containers:
      brand_container = container.find_all("a",{"class":"item-brand"})
 brand_name = brand_container[0].img["title"]
