@@ -16,5 +16,17 @@ page_soup = soup(kurasa, "html.parser")
 containers = page_soup.findAll("div",{"class":"item-container"})
 
 for container in containers:
-     brand_container = container.find_all("a",{"class":"item-brand"})
-brand_name = brand_container[0].img["title"]
+    brand_container = container.findAll("div", {"class":"item-info"})
+    brand = brand_container[0].div.a.img["title"]
+
+    title_container = container.findAll("a",{"class":"item-title"})
+    product_name = title_container[0].text
+
+    shipping_container = container.findAll("li",{"class":"price-ship"})
+    shipping = shipping_container[0].text.strip()
+
+    print("brand: " + brand) 
+    print("product_name: " + product_name)
+    print("shipping: " + shipping)
+
+
