@@ -1,0 +1,6 @@
+{
+    "name": "Run",
+    "etc": "etc",
+    "envFile": "${workspaceFolder}/venv",
+    "python.pythonPath": "C:\\Users\\Joy Safie\\envs\\crwl\\Scripts\\python.exe"
+}
